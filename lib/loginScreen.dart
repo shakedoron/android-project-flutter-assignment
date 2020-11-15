@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hello_me/signUpUser.dart';
-import 'package:hello_me/suggestions.dart';
 import 'package:hello_me/userRep.dart';
 import 'package:provider/provider.dart';
 import 'userRep.dart';

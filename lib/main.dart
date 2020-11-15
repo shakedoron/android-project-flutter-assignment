@@ -7,7 +7,6 @@ import 'package:hello_me/favoritesScreen.dart';
 import 'package:hello_me/profilePage.dart';
 import 'package:hello_me/userRep.dart';
 import 'package:provider/provider.dart';
-import 'package:snapping_sheet/snapping_sheet.dart';
 
 import 'loginScreen.dart';
 import 'suggestions.dart';
@@ -73,8 +72,6 @@ class _RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    SnappingSheetController controller = SnappingSheetController();
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup Name Generator'),
