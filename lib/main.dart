@@ -68,7 +68,7 @@ class RandomWords extends StatefulWidget {
 class _RandomWordsState extends State<RandomWords> {
   final List<WordPair> _suggestions = <WordPair>[];
   final TextStyle _biggerFont = const TextStyle(fontSize: 18);
-  bool _isblur = false;
+  bool _isBlur = false;
 
   @override
   Widget build(BuildContext context) {
@@ -84,13 +84,15 @@ class _RandomWordsState extends State<RandomWords> {
                     Provider.of<UserRep>(context, listen: false).signOut();
                     Provider.of<Suggestions>(context, listen: false)
                         .removeSuggestions();
+                    if(_isBlur)
+                      changeBlur();
                   })
               : IconButton(icon: Icon(Icons.login), onPressed: _pushLogin),
         ],
       ),
       body: Stack(children: [
         _buildSuggestions(),
-        _isblur
+        _isBlur
             ? BackdropFilter(
                 filter: ImageFilter.blur(
                   sigmaX: 5.0,
@@ -181,7 +183,7 @@ class _RandomWordsState extends State<RandomWords> {
 
   changeBlur(){
     setState(() {
-      _isblur = !_isblur;
+      _isBlur = !_isBlur;
     });
   }
 }

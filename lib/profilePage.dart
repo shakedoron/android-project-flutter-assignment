@@ -83,12 +83,17 @@ class _ProfilePageState extends State<ProfilePage> {
             Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Flexible(
-                    child: Text(
-                      user?.email ?? "",
-                      style: TextStyle(fontSize: 20),
+                  Container(
+                    width: 250,
+                    height: 20,
+                    child: FittedBox(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        user?.email ?? "",
+                        style: TextStyle(fontSize: 18),
+                      ),
                     ),
                   ),
                   Flexible(
